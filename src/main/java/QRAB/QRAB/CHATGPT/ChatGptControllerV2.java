@@ -23,7 +23,7 @@ public class ChatGptControllerV2 {
         return "form"; // form.html 타임리프 템플릿
     }
 
-    @PostMapping("/zeroshot")
+    @PostMapping("/zeroshot")//zero shot
     public String chat1(@RequestParam(name = "prompt", required = false) String prompt, Model model) {
         String response = chatGptController.chat1(prompt);
         model.addAttribute("response", response);
