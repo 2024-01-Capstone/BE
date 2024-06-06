@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ChatGPT Prompt Form</title>
+</head>
+<body>
+<h1>퀴즈 생성할 학습 블로그 자료 입력하기</h1>
+<form action="#" th:action="@{/gpt/zeroshot}" method="post">
+    <label for="prompt1">Prompt:</label><br>
+    <textarea id="prompt1" name="prompt" rows="4" cols="50"></textarea><br>
+    <button type="submit">Zero-Shot</button>
+</form>
+<form action="#" th:action="@{/gpt/oneshot}" method="post">
+    <label for="prompt2">Prompt:</label><br>
+    <textarea id="prompt2" name="prompt" rows="4" cols="50"></textarea><br>
+    <button type="submit">One-Shot</button>
+</form>
+<form action="#" th:action="@{/gpt/fewshot}" method="post">
+    <label for="prompt3">Prompt:</label><br>
+    <textarea id="prompt3" name="prompt" rows="4" cols="50"></textarea><br>
+    <button type="submit">Few-Shot</button>
+</form>
+<h1> 학습 분석할 결과 내용 https://github.com/2024-01-Capstone/BE.git입력하기</h1>
+<form action="#" th:action="@{/gpt/analyze}" method="post">
+    <label for="prompt4">Prompt:</label><br>
+    <textarea id="prompt4" name="prompt" rows="4" cols="50"></textarea><br>
+    <button type="submit">Learning Analytics</button>
+</form>
+</body>
+</html>

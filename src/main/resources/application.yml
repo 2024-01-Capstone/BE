@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: QRAB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/qrab?Timezone=Asia/Seoul
+    username: root
+    password: Leeyunjin1!!
+
+
+openai:
+  model: gpt-3.5-turbo
+  api:
+    key: "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"
+    url: "https://api.openai.com/v1/chat/completions"
+
+server:
+  tomcat:
+    threads:
+      max: 200
+    max-swallow-size: 2MB
+    max-http-post-size: 2MB
+  connection-timeout: 5s
+  max-http-request-header-size: 1000KB
+
+
+
+
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+  logging:
+    level:
+      org.hibernate.SQL: debug
